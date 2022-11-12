@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body class="class=p-3 mb-2 " style='background-color:rgb(250, 36, 59,0.1)'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+ {% include 'app1/navbar.html'%}<br><br><br>
+ 
+ 
+<div class="container ">
+  <div class="row">
+    <div class="col-8 mt-3">
+  <center><h1 style="color: black;">UPDATE BOOK !</h1></center>
+  <table class="table table table-dark table-hover">
+    <form method="post">
+      {% csrf_token %}
+  <div class="mb-3">
+    <label for="name" class="form-label">bookame</label>
+    <input type="text" class="form-control" id="name" name="bookname" value="{{data.book_name}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">author name </label>
+    <input type="text" class="form-control" id="age" name="authorname" value="{{data.author_name}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="dept" class="form-label">price</label>
+    <input type="number" class="form-control" id="dept" name="price" value="{{data.price}}" required>
+  </div>
+  <div class="mb-3">
+  <label for="dept" class="form-label">book type</label>
+  <select class="form-select" name="booktype"  >
+    <option selected>{{data.type_of_book}} </option>
+    <option value="non-fiction">non-fiction</option>
+    <option value="edited">edited</option>
+    <option value="Reference">Reference</option>
+    <option value="Fiction">Fiction</option>
+  </select>
+</div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+&nbsp &nbsp&nbsp&nbsp&nbsp
+  <button type="reset" class="btn btn-warning">Reset</button>
+</form>
+</div>
+</div>
+</div></div>
+</div>
+{% include 'app1/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg bg-primary fixed-top">
+      <div class="container-fluid">
+        <h1>LIBRARY MANAGEMENT SYSTEM </h1>
+        {% if user.is_authenticated %}
+        <h4 class='text-dark'> <i> Hello, </i> <i style='color:red;'>{{ user.username }}</i>   </h4>
+        <form class="d-flex" action="/accounts/logout/">
+          <button class="btn  bg-light" type="submit">LOGOUT</button>
+        </form>
+        {% endif %}
+      </div>
+    </nav>

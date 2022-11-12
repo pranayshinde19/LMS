@@ -1,0 +1,27 @@
+.tbl-container{
+    max-width:fit-content;
+    max-height:fit-content;
+}
+.tbl-fixed{
+    overflow-y:scroll;
+    Height:fit-content;
+    max-height:87vh
+}
+table th {
+    position:sticky;
+    top:0px;
+}
+.mybutton{
+    border: 1px solid;
+    background-color: rgba(255,0,0,0.1);
+    font-size: medium;
+    font-weight: bold;
+    padding: 5px 0px 5px 5px;
+    width: 120px;
+    margin-left: 1px;
+    text-align: left;
+}
+.mybutton:hover {
+    background-color: white;
+    color:blue;
+  }
